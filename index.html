@@ -1,0 +1,73 @@
+<!doctype html>
+<!--html tag and sets language to english-->
+<html lang="en">
+    <!--head is a container for metadata-->
+    <head>
+        <!--adds css support-->
+        <link rel="stylesheet" href="assets/styles.css">
+        <!--adds a favicon-->
+        <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+        <!--gives the site a name in the tab bar-->
+        <title>Startpage</title>
+        <!--sets  the character set to UTF-8-->
+        <meta charset="UTF-8">
+        <!--gives the site/file a description-->
+        <meta name="description" content="Startpage">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="Reddit">
+                <iframe src="https://redditgrid.com/r/MechanicalKeyboards%2Bmechanicalpencils%2Bworkspaces%2Bfountainpens%2Bmodelm" frameborder="0"></iframe>
+            </div>
+            <div class="Search-Container">
+                <div class="Search-Area">
+                    <form action="https://www.google.com/search" method="GET">
+                        <input type="text" placeholder="Search for Something" name="q" autofocus="" autocomplete="off">
+                    </form>
+                </div>
+            </div>
+            <div class="News">
+                <iframe src="https://www.oregonlive.com/" frameborder="0"></iframe>
+            </div>
+            <div class="Weather">
+                <div class="Weather-Container"><p>Weather</p></div>
+            </div>
+            <div class="T-n-D">
+                <div class="Time-and-Date-Container">
+                    <div class="Date" id="date"> </div>
+                    <div class="Time" id="time"></div>
+                </div>
+            </div>
+            
+            <div class="Space-6">
+                <div class="Space-6-Container"><p>Space-6</p></div>
+            </div>
+            <div class="Space-7">
+                <div class="Space-7-Container"><p>Space-7</p></div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function updateDate() {
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = (1 + date.getMonth()).toString().padStart(2, '0');
+      var day = date.getDate().toString().padStart(2, '0');
+      document.getElementById("date").innerHTML = year + "." + month + "." + day;
+    }
+    updateDate();
+  </script>
+
+<script>
+    function updateTime() {
+      var date = new Date();
+      var hours = date.getHours().toString().padStart(2, '0');
+      var minutes = date.getMinutes().toString().padStart(2, '0');
+      var seconds = date.getSeconds().toString().padStart(2, '0');
+      document.getElementById("time").innerHTML = hours + "." + minutes + "." + seconds;
+    }
+    setInterval(updateTime, 1000);
+  </script>

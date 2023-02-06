@@ -1,0 +1,181 @@
+body {
+    background-color: #1a1a1a;
+    font-family: "Helvetica", Arial, sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: grid; 
+    grid-template-columns: 400px 400px 400px 400px 400px; 
+    grid-template-rows: 400px 400px 400px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Weather Weather Weather T-n-D Reddit"
+      "News Search-Container Search-Container Search-Container Reddit"
+      "News Space-6 Space-6 Space-7 Space-7"; 
+}
+
+.Reddit {
+    grid-area: Reddit; 
+    border-radius: 50px; 
+    padding: 15px; 
+}
+.Search-Container { 
+    grid-area: Search-Container; 
+    border-radius: 50px;
+    padding: 15px; 
+    margin: 0;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.Weather { 
+    grid-area: Weather; 
+    border-radius: 50px; 
+    padding: 15px;
+}
+.T-n-D {
+    position: relative; 
+    grid-area: T-n-D;
+    border-radius: 50px; 
+    padding: 15px; 
+}
+.News { 
+    grid-area: News; 
+    border-radius: 50px; 
+    padding: 15px; 
+}
+.Space-6 { 
+    grid-area: Space-6; 
+    border-radius: 50px; 
+    padding: 15px; }
+.Space-7 { 
+    grid-area: Space-7; 
+    border-radius: 50px; 
+    padding: 15px; 
+}
+
+iframe {
+    border-radius: 25px;
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    scrollbar-width: none;  /* Firefox */
+}
+
+.Search-Area {
+    border-radius: 50px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.Search-Container .Search-Area form {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Search-Container .Search-Area form input {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-color: #efefef;
+    width: 900px;
+    height: 50px;
+    border-radius: 25px;
+    border: #efefef 3px solid;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #000000;
+    color: #efefef;
+    font-size: 1em;
+}
+
+.Search-Container .Search-Area form input:focus {
+    outline: none;
+}
+
+.Time-and-Date-Container {
+    position: relative;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    
+}
+
+.Date {
+    position: relative;
+    color: #efefef;
+    font-size: 3em;
+    font-weight: bold;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.Time {
+    position: relative;
+    color: #efefef;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.Weather-Container {
+    color: #efefef;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.Weather-Container p {
+    padding: 50px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.Space-6-Container {
+    color: #efefef;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.Space-6-Container p {
+    padding: 50px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.Space-7-Container {
+    color: #efefef;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.Space-7-Container p {
+    padding: 50px;
+    font-size: 3em;
+    font-weight: bold;
+}
